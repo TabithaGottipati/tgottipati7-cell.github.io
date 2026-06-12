@@ -97,7 +97,34 @@
         z-index: 1000;
     }
 
-   
+    /* SECTIONS */
+    section {
+        padding: 120px 10%;
+        border-bottom: 1px solid #1f2937;
+    }
+
+    h1, h2 {
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        color: #58a6ff;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+        max-width: 800px;
+        margin-bottom: 20px;
+    }
 
     /* CARDS */
     .card {
@@ -203,7 +230,7 @@
 
 <body>
 
-<!-- LIGHT/DARK MODE TOGGLE -->
+<!-- NAV -->
 <nav>
     <div style="font-size: 1.3rem; font-weight: 700;">Tabi Engineering</div>
     <div>
@@ -218,17 +245,8 @@
     </div>
 </nav>
 
-<!-- FLOATING ELEMENTS -->
+<!-- FLOATING SHAPE -->
 <div id="floating-shape"></div>
-
-<div id="cube">
-    <div class="front"></div>
-    <div class="back"></div>
-    <div class="left"></div>
-    <div class="right"></div>
-    <div class="top"></div>
-    <div class="bottom"></div>
-</div>
 
 <!-- HERO -->
 <section id="home">
@@ -311,17 +329,4 @@
 
 <script>
     /* FLOATING SHAPE SCROLL ANIMATION */
-    const shape = document.getElementById("floating-shape");
-    window.addEventListener("scroll", () => {
-        const y = window.scrollY;
-        shape.style.transform = `rotateX(${y * 0.15}deg) rotateY(${y * 0.25}deg)`;
-    });
-
-    /* LIGHT/DARK MODE */
-    document.getElementById("toggle").onclick = () => {
-        document.body.classList.toggle("light");
-    };
-</script>
-
-</body>
-</html>
+    const
