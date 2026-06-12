@@ -97,64 +97,7 @@
         z-index: 1000;
     }
 
-    /* 3D ROTATING MODEL (simple cube) */
-    #cube {
-        width: 120px;
-        height: 120px;
-        position: fixed;
-        left: 5%;
-        top: 30%;
-        transform-style: preserve-3d;
-        animation: spin 8s linear infinite;
-        z-index: 900;
-    }
-    #cube div {
-        position: absolute;
-        width: 120px;
-        height: 120px;
-        background: rgba(0, 150, 255, 0.3);
-        border: 2px solid #00aaff;
-    }
-    #cube .front  { transform: translateZ(60px); }
-    #cube .back   { transform: rotateY(180deg) translateZ(60px); }
-    #cube .left   { transform: rotateY(-90deg) translateZ(60px); }
-    #cube .right  { transform: rotateY(90deg) translateZ(60px); }
-    #cube .top    { transform: rotateX(90deg) translateZ(60px); }
-    #cube .bottom { transform: rotateX(-90deg) translateZ(60px); }
-
-    @keyframes spin {
-        from { transform: rotateX(0deg) rotateY(0deg); }
-        to   { transform: rotateX(360deg) rotateY(360deg); }
-    }
-
-    /* SECTIONS */
-    section {
-        padding: 120px 10%;
-        border-bottom: 1px solid #1f2937;
-    }
-
-    h1, h2 {
-        font-weight: 700;
-        letter-spacing: 1px;
-    }
-
-    h1 {
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-    }
-
-    h2 {
-        font-size: 2.2rem;
-        margin-bottom: 20px;
-        color: #58a6ff;
-    }
-
-    p {
-        font-size: 1.1rem;
-        line-height: 1.7rem;
-        max-width: 800px;
-        margin-bottom: 20px;
-    }
+   
 
     /* CARDS */
     .card {
