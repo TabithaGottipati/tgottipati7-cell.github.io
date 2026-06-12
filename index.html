@@ -84,18 +84,20 @@
 
     /* FLOATING SHAPE */
     #floating-shape {
-        position: fixed;
-        top: 20%;
-        right: 5%;
-        width: 120px;
-        height: 120px;
-        background: linear-gradient(135deg, #00aaff, #0066ff);
-        border-radius: 20px;
-        filter: drop-shadow(0 0 20px #0088ff);
-        transform-style: preserve-3d;
-        transition: transform 0.1s linear;
-        z-index: 1000;
-    }
+    position: fixed;
+    top: 20%;
+    right: 5%;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #00aaff, #0066ff);
+    border-radius: 20px;
+    filter: drop-shadow(0 0 20px #0088ff);
+    transform-style: preserve-3d;
+    transition: transform 0.1s linear;
+    z-index: 1000;
+    animation: floaty 4s ease-in-out infinite;
+}
+
 
     /* SECTIONS */
     section {
@@ -225,6 +227,12 @@
         color: #8b949e;
         font-size: 0.9rem;
     }
+    @keyframes floaty {
+        0%   { transform: translateY(0px); }
+        50%  { transform: translateY(-20px); }
+        100% { transform: translateY(0px); }
+    }
+
 </style>
 </head>
 
@@ -247,6 +255,7 @@
 
 <!-- FLOATING SHAPE -->
 <div id="floating-shape"></div>
+    
 
 <!-- HERO -->
 <section id="home">
