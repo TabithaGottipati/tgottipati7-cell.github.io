@@ -1,63 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Portfolio</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Engineering Portfolio – Tabi</title>
 
-    <link rel="stylesheet" href="style.css">
+<style>
+    /* Global Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+        background: #0d1117;
+        color: #e6edf3;
+        overflow-x: hidden;
+    }
+
+    /* Floating interactive element */
+    #floating-shape {
+        position: fixed;
+        top: 20%;
+        right: 5%;
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(135deg, #00aaff, #0066ff);
+        border-radius: 20px;
+        filter: drop-shadow(0 0 20px #0088ff);
+        transform-style: preserve-3d;
+        transition: transform 0.1s linear;
+        z-index: 1000;
+    }
+
+    /* Section Styling */
+    section {
+        padding: 120px 10%;
+        border-bottom: 1px solid #1f2937;
+    }
+
+    h1, h2 {
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        color: #58a6ff;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.7rem;
+        max-width: 800px;
+        margin-bottom: 20px;
+    }
+
+    /* Navigation */
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background: rgba(13, 17, 23, 0.8);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 999;
+        border-bottom: 1px solid #1f2937;
+    }
+
+    nav a {
+        color: #e6edf3;
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.2s;
+    }
+
+    nav a:hover {
+        color: #58a6ff;
+    }
+
+    /* Section Cards */
+    .card {
+        background: #161b22;
+        padding: 30px;
+        border-radius: 12px;
+        margin-top: 20px;
+        border: 1px solid #1f2937;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
+    }
+</style>
 </head>
 
 <body>
 
-    <div id="particles"></div>
+<!-- Floating interactive shape -->
+<div id="floating-shape"></div>
 
-    <nav>
-        <div class="logo">TG</div>
+<!-- Navigation -->
+<nav>
+    <div style="font-size: 1.3rem; font-weight: 700;">Tabi Engineering</div>
+    <div>
+        <a href="#research">Research</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#internships">Internships</a>
+        <a href="#ta">TA Experience</a>
+    </div>
+</nav>
 
-        <div class="nav-links">
-            <a href="#">Projects</a>
-            <a href="#">Research</a>
-            <a href="#">Experience</a>
-            <a href="#">Contact</a>
-        </div>
-    </nav>
+<!-- Hero Section -->
+<section id="home">
+    <h1>Engineering Portfolio</h1>
+    <p>Welcome to my engineering portfolio — a curated collection of my research, technical achievements, internships, and teaching experience. Designed as a single-page experience for recruiters and collaborators.</p>
+</section>
 
-    <section class="hero">
+<!-- Research -->
+<section id="research">
+    <h2>Research</h2>
+    <div class="card">
+        <p>Describe your engineering research here. You can include robotics, aerospace, mechanical systems, embedded systems, simulations, or anything else you’ve worked on.</p>
+    </div>
+</section>
 
-        <p class="intro">
-            ENGINEERING • DESIGN • SOFTWARE
-        </p>
+<!-- Achievements -->
+<section id="achievements">
+    <h2>Achievements</h2>
+    <div class="card">
+        <p>List awards, competitions, publications, engineering challenges, or notable accomplishments.</p>
+    </div>
+</section>
 
-        <h1>
-            Building the Future<br>
-            One Problem at a Time
-        </h1>
+<!-- Internships -->
+<section id="internships">
+    <h2>Internships</h2>
+    <div class="card">
+        <p>Summaries of your engineering internships, responsibilities, and impact.</p>
+    </div>
+</section>
 
-        <p class="subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+<!-- TA Experience -->
+<section id="ta">
+    <h2>Teaching Assistant Experience</h2>
+    <div class="card">
+        <p>Describe your TA roles, courses supported, and contributions to student learning.</p>
+    </div>
+</section>
 
-        <div class="buttons">
-            <button class="primary">
-                View Projects
-            </button>
+<script>
+    // Interactive scroll animation
+    const shape = document.getElementById("floating-shape");
 
-            <button class="secondary">
-                Learn More
-            </button>
-        </div>
-
-        <div class="scroll-indicator">
-            SCROLL ↓
-        </div>
-
-    </section>
-
-    <script src="script.js"></script>
+    window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        shape.style.transform = `rotateX(${scrollY * 0.15}deg) rotateY(${scrollY * 0.25}deg)`;
+    });
+</script>
 
 </body>
-
 </html>
