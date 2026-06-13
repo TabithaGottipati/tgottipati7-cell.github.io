@@ -31,9 +31,12 @@
         background: rgba(255,255,255,0.8);
         border-bottom: 1px solid #ccc;
     }
-    body.light .card, body.light .contact-box {
+    body.light .card, 
+    body.light .contact-box,
+    body.light .project {
         background: #fff;
         border: 1px solid #ddd;
+        color: #111;
     }
     body.light h2 {
         color: #0066cc;
@@ -75,7 +78,7 @@
         border: 1px solid #333;
         color: #e6edf3;
         transition: 0.2s;
-        margin-left: 35px; /* moved slightly left from previous 60px */
+        margin-left: 35px;
     }
     body.light #toggle {
         background: #ddd;
@@ -83,7 +86,7 @@
         border: 1px solid #aaa;
     }
 
-    /* FLOATING SHAPE (ROTATES ONLY ON SCROLL) */
+    /* FLOATING SHAPE */
     #floating-shape {
         position: fixed;
         top: 20%;
@@ -170,7 +173,7 @@
     }
 
     .timeline-item {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         position: relative;
     }
 
@@ -183,6 +186,17 @@
         position: absolute;
         left: -30px;
         top: 5px;
+    }
+
+    .company-logo {
+        width: 140px;
+        margin-bottom: 10px;
+    }
+
+    .internship-date {
+        font-size: 0.95rem;
+        color: #9aa0a6;
+        margin-bottom: 10px;
     }
 
     /* CONTACT */
@@ -267,30 +281,17 @@
 <!-- ACHIEVEMENTS -->
 <section id="achievements">
     <h2>Achievements</h2>
-    <div class="card">
-        <h3>SAME Engineering Scholarship</h3>
-    </div>
-    <div class="card">
-        <h3>Dream Team Engineering Designathon 2025</h3>
-    </div>
+    <div class="card"><h3>SAME Engineering Scholarship</h3></div>
+    <div class="card"><h3>Dream Team Engineering Designathon 2025</h3></div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
     <h2>Projects</h2>
     <div class="gallery">
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of the project.</p>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of the project.</p>
-        </div>
-        <div class="project">
-            <h3>Project 3</h3>
-            <p>Description of the project.</p>
-        </div>
+        <div class="project"><h3>Project 1</h3><p>Description of the project.</p></div>
+        <div class="project"><h3>Project 2</h3><p>Description of the project.</p></div>
+        <div class="project"><h3>Project 3</h3><p>Description of the project.</p></div>
     </div>
 </section>
 
@@ -298,47 +299,46 @@
 <section id="internships">
     <h2>Internships</h2>
     <div class="timeline">
+
         <div class="timeline-item">
-            <h3>Stellar</h3>
+            <img src="stellar.png" class="company-logo">
+            <div class="internship-date">Summer 2022</div>
             <p>Role, responsibilities, impact.</p>
         </div>
+
         <div class="timeline-item">
-            <h3>Arco Murray Construction</h3>
+            <img src="arco.png" class="company-logo">
+            <div class="internship-date">Summer 2023</div>
             <p>Role, responsibilities, impact.</p>
         </div>
+
         <div class="timeline-item">
-            <h3>Medtronic</h3>
-            <p> ● Drafted biocompatibility memo for 9 wristed instruments to help determine patient-contact area 
-● Tested M-IRR instrument subsystems using different methods such as Instron 
-● Drafted a report summarizing testing, data analysis, and conclusions of M-IRR verification 
-● Drafted report verifying updated requirements and design products for 8 instruments </p>
+            <img src="medtronic.png" class="company-logo">
+            <div class="internship-date">Summer 2024</div>
+            <ul>
+                <li>Drafted biocompatibility memo for 9 wristed instruments to determine patient-contact area</li>
+                <li>Tested M-IRR instrument subsystems using methods such as Instron</li>
+                <li>Drafted report summarizing testing, data analysis, and conclusions of M-IRR verification</li>
+                <li>Drafted report verifying updated requirements and design products for 8 instruments</li>
+            </ul>
         </div>
+
         <div class="timeline-item">
-            <h3>Booz Allen Hamilton</h3>
+            <img src="bah.png" class="company-logo">
+            <div class="internship-date">Summer 2025</div>
             <p>Role, responsibilities, impact.</p>
         </div>
+
     </div>
 </section>
 
 <!-- TA EXPERIENCE -->
 <section id="ta">
     <h2>Teaching Assistant Experience</h2>
-    <div class="card">
-        <h3>Computer Programming for Engineers (MATLAB)</h3>
-        <p>Role, responsibilities, impact.</p>
-    </div>
-    <div class="card">
-        <h3>Numerical Methods</h3>
-        <p>Role, responsibilities, impact.</p>
-    </div>
-    <div class="card">
-        <h3>Design and Manufacturing Lab</h3>
-        <p>Role, responsibilities, impact.</p>
-    </div>
-    <div class="card">
-        <h3>Mechanical Engineering Design 3 (Senior Capstone Class)</h3>
-        <p>Role, responsibilities, impact.</p>
-    </div>
+    <div class="card"><h3>Computer Programming for Engineers (MATLAB)</h3><p>Role, responsibilities, impact.</p></div>
+    <div class="card"><h3>Numerical Methods</h3><p>Role, responsibilities, impact.</p></div>
+    <div class="card"><h3>Design and Manufacturing Lab</h3><p>Role, responsibilities, impact.</p></div>
+    <div class="card"><h3>Mechanical Engineering Design 3 (Senior Capstone Class)</h3><p>Role, responsibilities, impact.</p></div>
 </section>
 
 <!-- CONTACT -->
@@ -346,7 +346,7 @@
     <h2>Contact</h2>
     <div class="contact-box">
         <p>Email: <a href="mailto:tgottipati@ufl.edu">tgottipati@ufl.edu</a></p>
-        <p>LinkedIn: <a href="#">https://www.linkedin.com/in/tabithagottipati/</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/tabithagottipati/">linkedin.com/in/tabithagottipati</a></p>
         <p>GitHub: <a href="#">github.com/yourgithub</a></p>
     </div>
 </section>
