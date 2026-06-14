@@ -42,50 +42,54 @@
         color: #0066cc;
     }
 
-    /* NAVIGATION */
-    nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        padding: 20px 10%;
-        background: rgba(13, 17, 23, 0.8);
-        backdrop-filter: blur(10px);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        z-index: 999;
-        border-bottom: 1px solid #1f2937;
-    }
+   /* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: rgba(13, 17, 23, 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* <-- THIS forces perfect vertical alignment */
+    z-index: 999;
+    border-bottom: 1px solid #1f2937;
+}
 
-    nav a {
-        color: inherit;
-        margin-left: 20px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: 0.2s;
-    }
+nav a {
+    color: inherit;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s;
+    line-height: 1; /* keeps link height consistent */
+}
 
-    nav a:hover {
-        color: #58a6ff;
-    }
+nav a:hover {
+    color: #58a6ff;
+}
 
-    /* LIGHT/DARK TOGGLE */
-    #toggle {
-        cursor: pointer;
-        padding: 8px 14px;
-        border-radius: 8px;
-        background: #161b22;
-        border: 1px solid #333;
-        color: #e6edf3;
-        transition: 0.2s;
-        margin-left: 20px;
-        vertical-align: middle;
-    }
-    body.light #toggle {
-        background: #ddd;
-        color: #111;
-        border: 1px solid #aaa;
-    }
+/* LIGHT/DARK TOGGLE */
+#toggle {
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 8px;
+    background: #161b22;
+    border: 1px solid #333;
+    color: #e6edf3;
+    transition: 0.2s;
+    margin-left: 20px;
+    line-height: 1; /* matches nav link height */
+    display: inline-flex; 
+    align-items: center; /* centers text vertically */
+}
+body.light #toggle {
+    background: #ddd;
+    color: #111;
+    border: 1px solid #aaa;
+}
+
 
     /* FLOATING SHAPE */
     #floating-shape {
