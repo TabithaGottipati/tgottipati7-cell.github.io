@@ -57,19 +57,12 @@
         border-bottom: 1px solid #1f2937;
     }
 
-    /* Make title and links inline */
-    nav div {
-        display: flex;
-        align-items: center;
-    }
-
     nav a {
         color: inherit;
         margin-left: 20px;
         text-decoration: none;
         font-weight: 500;
         transition: 0.2s;
-        line-height: 1;
     }
 
     nav a:hover {
@@ -85,10 +78,7 @@
         border: 1px solid #333;
         color: #e6edf3;
         transition: 0.2s;
-        margin-left: 20px;
-        line-height: 1;
-        display: inline-flex;
-        align-items: center;
+        margin-left: 35px;
     }
     body.light #toggle {
         background: #ddd;
@@ -179,7 +169,7 @@
     .timeline {
         border-left: 3px solid #58a6ff;
         padding-left: 40px;
-        margin-left: 100px;
+        margin-left: 140px; /* SHIFT LINE RIGHT */
         margin-top: 20px;
         position: relative;
     }
@@ -187,10 +177,9 @@
     .timeline-item {
         margin-bottom: 50px;
         position: relative;
-        padding-left: 40px;
+        padding-left: 120px;
     }
 
-    /* FIXED DOT ALIGNMENT + GLOW EFFECT */
     .timeline-item::before {
         content: "";
         width: 14px;
@@ -198,21 +187,14 @@
         background: #58a6ff;
         border-radius: 50%;
         position: absolute;
-        left: -43px;
+        left: -30px;
         top: 5px;
-        transition: 0.2s ease;
-        box-shadow: 0 0 0px #58a6ff;
     }
 
-    .timeline-item:hover::before {
-        transform: scale(1.35);
-        box-shadow: 0 0 12px #58a6ff;
-    }
-
-    /* Dates on left side */
+    /* Dates on left side with spacing preserved */
     .internship-date {
         position: absolute;
-        left: -180px;
+        left: -170px;
         top: 0;
         width: 150px;
         text-align: right;
@@ -275,8 +257,8 @@
 
 <!-- NAV -->
 <nav>
+    <div style="font-size: 1.3rem; font-weight: 700;">Tabitha Gottipati Portfolio</div>
     <div>
-        <div style="font-size: 1.3rem; font-weight: 700; margin-right: 40px;">Tabitha Gottipati Portfolio</div>
         <a href="#home">Home</a>
         <a href="#research">Research</a>
         <a href="#achievements">Achievements</a>
@@ -300,4 +282,103 @@
 
 <!-- RESEARCH -->
 <section id="research">
-    <h2>Research</h2
+    <h2>Research</h2>
+    <div class="card">
+        <p>Describe your engineering research here.</p>
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements">
+    <h2>Achievements</h2>
+    <div class="card"><h3>SAME Engineering Scholarship</h3></div>
+    <div class="card"><h3>Dream Team Engineering Designathon 2025</h3></div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="gallery">
+        <div class="project"><h3>Project 1</h3><p>Description of the project.</p></div>
+        <div class="project"><h3>Project 2</h3><p>Description of the project.</p></div>
+        <div class="project"><h3>Project 3</h3><p>Description of the project.</p></div>
+    </div>
+</section>
+
+<!-- INTERNSHIPS -->
+<section id="internships">
+    <h2>Internships</h2>
+    <div class="timeline">
+
+        <div class="timeline-item">
+            <div class="internship-date">Summer 2022</div>
+            <img src="stellar.png" class="company-logo">
+            <p>Role, responsibilities, impact.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="internship-date">Summer 2023</div>
+            <img src="arco.png" class="company-logo">
+            <p>Role, responsibilities, impact.</p>
+        </div>
+
+        <div class="timeline-item">
+            <div class="internship-date">Summer 2024</div>
+            <img src="medtronic.png" class="company-logo">
+            <ul>
+                <li>Drafted biocompatibility memo for 9 wristed instruments to determine patient-contact area</li>
+                <li>Tested M-IRR instrument subsystems using methods such as Instron</li>
+                <li>Drafted report summarizing testing, data analysis, and conclusions of M-IRR verification</li>
+                <li>Drafted report verifying updated requirements and design products for 8 instruments</li>
+            </ul>
+        </div>
+
+        <div class="timeline-item">
+            <div class="internship-date">Summer 2025</div>
+            <img src="bah.png" class="company-logo">
+            <p>Role, responsibilities, impact.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- TA EXPERIENCE -->
+<section id="ta">
+    <h2>Teaching Assistant Experience</h2>
+    <div class="card"><h3>Computer Programming for Engineers (MATLAB)</h3><p>Role, responsibilities, impact.</p></div>
+    <div class="card"><h3>Numerical Methods</h3><p>Role, responsibilities, impact.</p></div>
+    <div class="card"><h3>Design and Manufacturing Lab</h3><p>Role, responsibilities, impact.</p></div>
+    <div class="card"><h3>Mechanical Engineering Design 3 (Senior Capstone Class)</h3><p>Role, responsibilities, impact.</p></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="contact-box">
+        <p>Email: <a href="mailto:tgottipati@ufl.edu">tgottipati@ufl.edu</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/tabithagottipati/">linkedin.com/in/tabithagottipati</a></p>
+        <p>GitHub: <a href="#">github.com/yourgithub</a></p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Tabi Engineering — All Rights Reserved
+</footer>
+
+<script>
+    /* ROTATE SHAPE ONLY WHEN SCROLLING */
+    const shape = document.getElementById("floating-shape");
+
+    window.addEventListener("scroll", () => {
+        const y = window.scrollY;
+        shape.style.transform = `rotateX(${y * 0.25}deg) rotateY(${y * 0.35}deg)`;
+    });
+
+    /* LIGHT/DARK MODE */
+    document.getElementById("toggle").onclick = () => {
+        document.body.classList.toggle("light");
+    };
+</script>
+
+</body>
+</html>
